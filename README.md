@@ -1,6 +1,6 @@
 # node-cpu-count
 
-A container-friendly alternative to os.cpus().length. Both cgroups v1 and cgroups v2 are supported.
+A container-friendly alternative to `os.cpus().length`. Both cgroups v1 and cgroups v2 are supported.
 
 ## Installation
 
