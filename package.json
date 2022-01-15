@@ -20,6 +20,8 @@
   ],
   "author": "Jiahao Lu <lujjjh@gmail.com>",
   "license": "MIT",
+  "repository": "github:lujjjh/cpu-count-js",
+  "funding": "https://ko-fi.com/lujjjh",
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.8",
