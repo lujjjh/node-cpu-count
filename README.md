@@ -1,11 +1,11 @@
-# cpu-count-js
+# node-cpu-count
 
 A container-friendly alternative to os.cpus().length. Both cgroups v1 and cgroups v2 are supported.
 
 ## Installation
 
 ```sh
-$ npm install cpu-count-js
+$ npm install node-cpu-count
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ A synchronous version of `cpuCount`.
 ## Examples
 
 ```sh
-$ git clone https://github.com/lujjjh/cpu-count-js.git && cd cpu-count-js
+$ git clone https://github.com/lujjjh/node-cpu-count.git && cd node-cpu-count
 
 $ docker run --rm -it -v $(pwd):/app node node /app/examples
 8

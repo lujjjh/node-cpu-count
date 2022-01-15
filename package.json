@@ -1,6 +1,6 @@
 {
-  "name": "cpu-count-js",
-  "version": "0.1.3",
+  "name": "node-cpu-count",
+  "version": "0.1.0",
   "description": "A container-friendly alternative to os.cpus().length. Both cgroups v1 and cgroups v2 are supported.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "npm run build"
   },
   "keywords": [
     "cgroup",
@@ -20,7 +21,7 @@
   ],
   "author": "Jiahao Lu <lujjjh@gmail.com>",
   "license": "MIT",
-  "repository": "github:lujjjh/cpu-count-js",
+  "repository": "github:lujjjh/node-cpu-count",
   "funding": "https://ko-fi.com/lujjjh",
   "devDependencies": {
     "@types/jest": "^27.4.0",
