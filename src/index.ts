@@ -3,20 +3,20 @@ import { normalizeQuota } from "./shared";
 import * as v1 from "./v1";
 import * as v2 from "./v2";
 
-export const cpuCount = async (min = 1, max = cpus().length) => {
+export const cpuCount = async (min = 1, max = cpus().length, ceiling = true) => {
   if (platform() !== "linux") return max;
   if (await v2.isV2()) {
-    return normalizeQuota(await v2.getCpuQuota(), min, max);
+    return normalizeQuota(await v2.getCpuQuota(), min, max, ceiling);
   } else {
-    return normalizeQuota(await v1.getCpuQuota(), min, max);
+    return normalizeQuota(await v1.getCpuQuota(), min, max, ceiling);
   }
 };
 
-export const cpuCountSync = (min = 1, max = cpus().length) => {
+export const cpuCountSync = (min = 1, max = cpus().length, ceiling = true) => {
   if (platform() !== "linux") return max;
   if (v2.isV2Sync()) {
-    return normalizeQuota(v2.getCpuQuotaSync(), min, max);
+    return normalizeQuota(v2.getCpuQuotaSync(), min, max, ceiling);
   } else {
-    return normalizeQuota(v1.getCpuQuotaSync(), min, max);
+    return normalizeQuota(v1.getCpuQuotaSync(), min, max, ceiling);
   }
 };

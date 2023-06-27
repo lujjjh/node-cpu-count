@@ -53,7 +53,9 @@ describe("cgroups v2", () => {
 describe("shared", () => {
   test("normalizeQuota", () => {
     expect(normalizeQuota(1.1, 1, 8)).toStrictEqual(2);
+    expect(normalizeQuota(1.1, 1, 8, false)).toStrictEqual(1.1);
     expect(normalizeQuota(0.1, 2, 8)).toStrictEqual(2);
+    expect(normalizeQuota(0.1, 2, 8, false)).toStrictEqual(2);
     expect(normalizeQuota(-1, 2, 8)).toStrictEqual(2);
     expect(normalizeQuota(16, 2, 8)).toStrictEqual(8);
     expect(normalizeQuota(undefined, 1, 8)).toStrictEqual(8);
