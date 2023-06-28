@@ -1,6 +1,6 @@
 {
   "name": "node-cpu-count",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A container-friendly alternative to os.cpus().length. Both cgroups v1 and cgroups v2 are supported.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
